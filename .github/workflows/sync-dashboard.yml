@@ -1,0 +1,43 @@
+name: Sync inbox dashboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - triage/latest.json
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: inbox-dashboard-sync
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Request a GitHub identity token
+        id: oidc
+        shell: bash
+        run: |
+          token_response="$(curl --fail-with-body --silent --show-error \
+            -H "Authorization: bearer ${ACTIONS_ID_TOKEN_REQUEST_TOKEN}" \
+            "${ACTIONS_ID_TOKEN_REQUEST_URL}&audience=inbox-command-centre")"
+          token="$(jq -r '.value' <<<"${token_response}")"
+          echo "token=${token}" >> "${GITHUB_OUTPUT}"
+
+      - name: Update the private dashboard
+        shell: bash
+        env:
+          OIDC_TOKEN: ${{ steps.oidc.outputs.token }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            -X POST \
+            -H "Authorization: Bearer ${OIDC_TOKEN}" \
+            -H "Content-Type: application/json" \
+            --data-binary @triage/latest.json \
+            https://inbox-command-centre.pyro-pete.chatgpt.site/api/triage-ingest
