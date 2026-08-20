@@ -1,0 +1,26 @@
+{
+  "runAt": "2026-08-20T19:19:14.028Z",
+  "items": [
+    {
+      "id": "gmail:synthetic-relay-test",
+      "receivedAt": "2026-08-20T19:19:14.029Z",
+      "senderName": "Automation Test",
+      "recipientNames": [
+        "Pete"
+      ],
+      "subject": "Secure dashboard relay test",
+      "summary": "Synthetic test data confirming that the private Gmail triage relay can update the dashboard.",
+      "category": "Development",
+      "urgency": "low",
+      "action": "No action required. This test record will be replaced by live Gmail results.",
+      "replyNeeded": false,
+      "draftStatus": "not-needed",
+      "recipientAudit": "not-applicable",
+      "sensitivity": "ordinary",
+      "attachmentPresent": false,
+      "draftUrl": null,
+      "threadState": "automated",
+      "decisionNeeded": null
+    }
+  ]
+}
