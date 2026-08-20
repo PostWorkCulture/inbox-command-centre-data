@@ -1,18 +1,60 @@
 {
-  "runAt": "2026-08-20T19:19:14.028Z",
+  "runAt": "2026-08-20T19:22:18.341Z",
   "items": [
     {
-      "id": "gmail:synthetic-relay-test",
-      "receivedAt": "2026-08-20T19:19:14.029Z",
-      "senderName": "Automation Test",
+      "id": "gmail:1a01fc9230346180",
+      "receivedAt": "2026-08-20T15:27:49.000Z",
+      "senderName": "OpenAI",
       "recipientNames": [
         "Pete"
       ],
-      "subject": "Secure dashboard relay test",
-      "summary": "Synthetic test data confirming that the private Gmail triage relay can update the dashboard.",
-      "category": "Development",
+      "subject": "New sign-in to your OpenAI account",
+      "summary": "OpenAI reported a sign-in from Chrome Mobile on Android in London at 16:27 BST.",
+      "category": "Security",
+      "urgency": "high",
+      "action": "Confirm whether this sign-in was yours. If not, secure the OpenAI account immediately using a trusted route.",
+      "replyNeeded": false,
+      "draftStatus": "blocked",
+      "recipientAudit": "not-applicable",
+      "sensitivity": "security",
+      "attachmentPresent": false,
+      "draftUrl": null,
+      "threadState": "active",
+      "decisionNeeded": "Confirm whether the OpenAI sign-in was expected"
+    },
+    {
+      "id": "gmail:1a01e89da5b89c92",
+      "receivedAt": "2026-08-20T10:17:26.000Z",
+      "senderName": "Google",
+      "recipientNames": [
+        "Pete"
+      ],
+      "subject": "Security alert",
+      "summary": "Google reported a Windows sign-in and, earlier in the same thread, that OpenAI was granted access to selected Google Account data.",
+      "category": "Security",
+      "urgency": "high",
+      "action": "Confirm both activities were expected. If either was not, review Google Account security through a trusted route.",
+      "replyNeeded": false,
+      "draftStatus": "blocked",
+      "recipientAudit": "not-applicable",
+      "sensitivity": "security",
+      "attachmentPresent": false,
+      "draftUrl": null,
+      "threadState": "active",
+      "decisionNeeded": "Confirm the Windows sign-in and OpenAI account access"
+    },
+    {
+      "id": "gmail:1a01fabcfcf741ea",
+      "receivedAt": "2026-08-20T14:55:47.000Z",
+      "senderName": "Morgan Hunt",
+      "recipientNames": [
+        "Pete"
+      ],
+      "subject": "Something's changed... and your CV is no longer the whole story.",
+      "summary": "A recruitment marketing email promoting an expanded candidate profile intended to show experience beyond a standard CV.",
+      "category": "Jobs",
       "urgency": "low",
-      "action": "No action required. This test record will be replaced by live Gmail results.",
+      "action": "No action required unless you want to update your Morgan Hunt candidate profile.",
       "replyNeeded": false,
       "draftStatus": "not-needed",
       "recipientAudit": "not-applicable",
